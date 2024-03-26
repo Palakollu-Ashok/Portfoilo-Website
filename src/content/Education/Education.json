@@ -1,0 +1,30 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "school": "UCE KU ,Kothagudem",
+      "date": "July 2018 - Jun 2022",
+      "grade": "7.42 CGPA",
+      "desc": "I am Completed  a Bachelor's degree in Computer Science and Engineering at UCE KU, Bhubaneswar. I have completed 8 semesters and have a CGPA of 7.42 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am learning and working on exciting projects with a team of talented developers.",
+      "degree": "Bachelor of Technology - B.Tech, Computer Science and Engineering"
+    },
+
+    {
+      "id": "2",
+      "school": "Gayathri Jr College , Sathupalli",
+      "date": "Aug 2016 - Apr 2018",
+      "grade": "88.2%",
+      "desc": "I completed my class 12 high school education at Gayathri Jr College, Khammam(Dist) , where I studied Science with Mathamatics.",
+      "degree": "Science with Mathamatics"
+    },
+
+    {
+      "id": 3,
+      "school": "SDVR ZPHS B.Gangaram",
+      "date": "Jun 2015 - Apr 2016",
+      "grade": "85%",
+      "desc": "I completed my class 10 education atSDVR ZPHS School,Khammam(Dist), where I studied Science with basic Computer Application.",
+      "degree": "Science with Computer"
+    }
+  ]
+}

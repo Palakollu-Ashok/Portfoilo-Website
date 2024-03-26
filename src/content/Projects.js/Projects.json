@@ -1,0 +1,31 @@
+{
+  "heading": "I have worked on a wide range of projects.Here are some of my projects",
+  "projects": [
+    {
+      "id": 0,
+
+      "title": "Cresol Infoserv Pvt. Ltd.",
+      "date": "Feb 2024 - Mar 2024",
+      "description": "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "image": "/assects/Projects/Cresole proj.png",
+      "tag": "JavaScript",
+      "tag4": "React Js  ",
+      "tag1": "HTML ",
+      "tag2": "Tailwind CSS ",
+      "tag3": "Redux",
+      "category": "web app",
+      "member": [
+        {
+          "name": "Rishav Chanda",
+          "linkedin": "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+          "github": "https://github.com/rishavchanda/"
+        },
+        {
+          "name": "Upasana Chaudhuri",
+          "linkedin": "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+          "github": "https://github.com/upasana0710"
+        }
+      ]
+    }
+  ]
+}
