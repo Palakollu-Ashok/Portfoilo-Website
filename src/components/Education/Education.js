@@ -9,24 +9,25 @@ import data from "../../content/Education/Education.json";
 
 const Education = () => {
   return (
-    <section id="5" className="bg-[#090917] py-10 px-3">
+    <section id="5" className="bg-[#090917] py-14 px-3">
       <div  className="grid justify-center py-8">
-        <h1 className="text-center text-white text-5xl ">Education</h1>
-        <h2 className="text-center text-white text-lg py-3">
+        <h1 className="text-center text-white/90 text-5xl font-serif font-bold">Education</h1>
+        <h2 className="text-center text-white/50 md:text-xl text-md font-serif py-3  ">
           My education has been a journey of self-discovery and growth. My
           educational details are as follows.
         </h2>
       </div>
       <VerticalTimeline className="">
         {data &&
-          data?.list.map((d) => (
+          data?.list.map((d,i) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: "rgb(16,23,37)", color: "#fff" }}
               contentArrowStyle={{ borderRight: "7px solid  rgb(16,23,37)" }}
               date={d.date}
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "" }}
               icon={<IoSchool />}
+              key={i}
             >
               <h3 className="vertical-timeline-element-title">{d.school}</h3>
               <h3 className="vertical-timeline-element-title">{d.degree}</h3>

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -11,34 +14,54 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-24 z-[999]  md:px-20 lg:px-40 bg-[#000300] text-white sticky top-0">
-      <a href="#1" className="w-full text-xl font-bold text-purple-500">
-        Ashok Palakollu
+    <div className="flex justify-between items-center h-24 z-[999] lg:px-14 px-10  bg-[#000300] text-white sticky top-0">
+      <a
+        href="#1"
+        className="w-full  gap-0.5 flex items-center  text-2xl  font-bold text-white"
+      >
+        <MdKeyboardArrowLeft className="text-5xl mt-1 tracking-tight text-purple-500" />
+        Ashok<span className="text-purple-500">/</span>Palakollu
+        <MdOutlineKeyboardArrowRight className="text-5xl mt-1 text-purple-500" />
       </a>
 
       {/* Desktop nav */}
       <ul className="hidden lg:flex">
-        <Link to="#1">
-          <li className="p-4 text-center w-32 hover:text-red-600">About</li>
-        </Link>
-        <a href="#2">
-          <li className="p-4 text-center w-32 hover:text-red-600">Skills</li>
+        <a href="#1" className="group">
+          <li className="p-4 text-center w-fit font-bold tracking-wide hover:text-red-600">
+            About
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
         </a>
-        {/* Dropdown */}
-        <a href="#3">
-          <li className="p-4 w-32 text-center hover:text-red-600">Experince</li>
+        <a href="#2" className="group">
+          <li className="p-4 text-center w-fit font-bold tracking-wide hover:text-red-600">
+            Skills
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
         </a>
-        <a href="#4">
-          <li className="p-4 w-32 text-center hover:text-red-600">Projects</li>
+
+        <a href="#3" className="group">
+          <li className="p-4 w-fit text-center font-bold tracking-wide hover:text-red-600">
+            Experince
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
         </a>
-        <a href="#5">
-          <li className="p-4 w-32 text-center hover:text-red-600">Education</li>
+        <a href="#4" className="group">
+          <li className="p-4 w-fit text-center font-bold tracking-wide hover:text-red-600">
+            Projects
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
+        </a>
+        <a href="#5" className="group">
+          <li className="p-4 w-fit text-center font-bold tracking-wide hover:text-red-600">
+            Education
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
         </a>
         <li className=" flex  space-x-6">
           <a
             href="https://github.com/Palakollu-Ashok"
             target="_blank"
-            className="border border-purple-500 text-purple-500 w-32 h-fit  rounded-full   p-3"
+            className="border border-purple-500  text-purple-500 w-32 h-fit  rounded-full   p-3"
           >
             Github Profile
           </a>
@@ -72,7 +95,6 @@ const Navbar = () => {
 
           <div>
             <Link to="#3">
-              {" "}
               <li className="p-4 flex   text-xl border-b border-gray-600 ">
                 Experince
               </li>
@@ -83,7 +105,7 @@ const Navbar = () => {
                 Education
               </h2>
             </Link>{" "}
-            <a to="#5">
+            <a href="#5">
               {" "}
               <h2 className="p-4 text-xl  border-b cursor-pointer border-gray-600">
                 Projects

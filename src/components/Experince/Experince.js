@@ -1,6 +1,5 @@
 import React from "react";
 import data from "../../content/Experince/Experince.json";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,22 +10,24 @@ import Image from "../../images/logo.jpg";
 
 const Experience = () => {
   return (
-    <section id="3" className="bg-[#090917] px-3">
-      <div className="grid justify-center py-8">
-        <h1 className="text-center text-white text-5xl ">Experince</h1>
-        <h2 className="text-center text-white text-lg py-3">
-        My work experience as a software engineer and working on different companies and projects.
+    <section id="3" className="bg-[#090917] md:p-14">
+      <div className="grid place-items-center py-8">
+        <h1 className="text-center text-white/90 text-5xl font-serif ">Experince</h1>
+        <h2 className="text-center text-white/50 text-lg py-3">
+          My work experience as a software engineer and working on different
+          companies and projects.
         </h2>
       </div>
+
       <VerticalTimeline className="py-5  ">
         <VerticalTimelineElement
-          className="vertical-timeline-element--work  "
+          className="vertical-timeline-element--work "
           contentStyle={{
             background: "rgb(16,23,37)",
             border: "1px #fff ",
             color: "#fff",
           }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(16,23,37)" }}
+          contentArrowStyle={{ borderRight: "7px solid", color: "#F6A303" }}
           date="2024-Feb"
           iconStyle={{ background: "rgb(16,23,37)", color: "#fff" }}
           icon={<MdWork />}
@@ -48,14 +49,13 @@ const Experience = () => {
             </div>
           </div>
           <p>{data.desc}</p>
-
-          <ul className=" flex">
-            <h2>{data.he}</h2>
-            <li className="mt-1 px-3 flex justify-center">{data.Skills}</li>
-          </ul>
+          <div className="text-white">
+            <ul className="flex text-white">
+              <h2 className="text-white text-lg">{data.title}</h2>
+              <li className="mt-1 px-3 flex justify-center">{data.Skills}</li>
+            </ul>
+          </div>
         </VerticalTimelineElement>
-
-        
       </VerticalTimeline>
     </section>
   );
