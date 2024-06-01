@@ -1,53 +1,12 @@
-// import React from "react";
-// import data from "../../content/About/HeroSection.json";
-// import Resume from "../../Files/AshokResume.pdf";
-
-// function HeroSection() {
-//   return (
-//     <div id="1" className="py-5 bg-[#090917] md:px-20 lg:px-40 px-3">
-//       <section className="md:flex justify-between space-y-6 md:space-y-0">
-//         <div className=" text-white space-y-3 self-end md:w-1/2">
-//           <h1 className="lg:text-5xl text-3xl py-1">{data.wish}</h1>
-//           <h1 className="lg:text-5xl text-5xl py-1">{data.name}</h1>
-//           <h2 className="lg:text-3xl text-xl  py-1">{data.role}</h2>
-//           <h3 className="lg:text-lg text-md text-[#919299]  py-3 font-semibold  ">
-//             {data.description}
-//           </h3>
-//           <div className="md:flex grid items-center">
-//             <a
-//               href={Resume}
-//               target="_blank"
-//               className="bg-[#AF00FF] focus-within:bg-[#AF00ff] cursor-pointer w-fit  rounded-full py-4 px-20"
-//             >
-//               {data.button}
-//             </a>
-//           </div>
-//         </div>
-//         <div className="grid place-content-center md:w-1/2">
-//           <img
-//             src={data.img}
-//             alt=""
-//             className="w-48 h-48 md:w-96 md:h-96   border-2 border-purple-700  md:rounded-full"
-//           />
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default HeroSection;
 import { TypeAnimation } from "react-type-animation";
 
 import React from "react";
-import data from "../../content/About/HeroSection.json";
 import Resume from "../../Files/AshokResume.pdf";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function HeroSection() {
-
-  
   return (
     <div className="grid place-items-center bg-[#090917]">
       <section
@@ -62,7 +21,7 @@ function HeroSection() {
           >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[700px] md:max-w-[800px] md:h-[30v] rounded-t-full"
+              className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full max-w-[200px] md:max-w-[300px]  rounded-t-full"
               src="/assects/About/Heroimg.jpg"
             />
           </div>
@@ -81,7 +40,7 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="text-6xl font-playfair z-10 text-center md:text-start">
+            <p className="xl:text-6xl md:text-3xl text-xl font-playfair z-10 text-center md:text-start">
               Ashok {""}
               <span
                 className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
@@ -90,23 +49,22 @@ function HeroSection() {
                 Palakollu
               </span>
             </p>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "I'm Front-End Developer",
-                1000,
-                "I'm Front-End Developer",
-                1200,
-                "I'm Front-End Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
-              repeat={Infinity}
-            />
+            <div className=" text-purple-700 xl:text-xl md:text-md sm:text-xs text-xs md:text-start text-center font-semibold py-4 ">
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "I'm Front-End Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "2em", display: "inline-block" }}
+                className="text-center"
+                repeat={Infinity}
+              />
+            </div>
 
-            <p className="mt-10 mb-7 text-white/70 md:text-md text-sm text-center md:text-start  font-thin">
+            <p className="mt-10 mb-7 text-white/70 md:text-md text-sm text-center md:text-start   leading-6">
               I am a motivated and versatile individual, always eager to take on
               new challenges. With a passion for learning I am dedicated to
               delivering high-quality results. With a positive attitude and a
@@ -127,21 +85,21 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <AnchorLink
-              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 font-semibold
+            <a
+              href="#7"
+              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 md:text-md text-sm md:font-semibold
             hover:bg-blue hover:text-white transition duration-500"
-              href="#contact"
             >
               Contact Me
-            </AnchorLink>
-            <AnchorLink
-              className="rounded-r-lg bg-gradient-rainblue border border-cyan-500 py-0.5 pr-0.5"
-              href="#contact"
+            </a>
+            <a
+              href={Resume} // Replace with the actual path to your CV file
+              download="CV.pdf" // The name you want the downloaded file to have
+              target="_blank"
+              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 font-semibold md:text-md text-sm md:font-semibold hover:bg-blue hover:text-white transition duration-500"
             >
-              <div className=" hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-                Let's talk.
-              </div>
-            </AnchorLink>
+              Resume(CV)
+            </a>
           </motion.div>
 
           <motion.div
@@ -155,7 +113,7 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           ></motion.div>
-          <div className="text-white flex gap-4 justify-center items-center w-1/2">
+          <div className="text-white flex gap-4 md:items-start  justify-center items-center md:w-1/2">
             <Link to="https://www.linkedin.com/in/palakollu-ashok-a218822626">
               <FaLinkedin className="w-5 h-5" />
             </Link>

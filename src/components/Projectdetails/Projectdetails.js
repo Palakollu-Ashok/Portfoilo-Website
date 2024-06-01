@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../../content/Projects.js/Projects.json";
 import Tilt from "react-parallax-tilt";
+import { Link } from "react-router-dom";
 
 function Projectdetails() {
   return (
@@ -14,34 +15,35 @@ function Projectdetails() {
       <h2 className=" text-white/50 md:text-xl text-md font-serif text-center py-4">
         {data.heading}
       </h2>
-      <Tilt>
-        <div className=" mt-3">
-          {data &&
-            data?.projects.map((d, i) => (
+      <div className=" mt-3 grid md:grid-cols-2 grid-cols-1 gap-10">
+        {data &&
+          data?.projects.map((d, i) => (
+            <Tilt>
               <div
                 key={i}
-                class="max-w-md bg-white bord grid   md:p-7 p-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                class="max-w-md bg-white bord grid    md:p-7 p-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
               >
-                <a href="#">
-                  <img class="rounded-lg" src={d.image} alt="" />
-                </a>
+                <Link to={d.link} target="_blank">
+                  <img
+                    class="rounded-lg md:h-[30vh] w-full"
+                    src={d.image}
+                    alt=""
+                  />
+                </Link>
                 <div className="w-full ">
                   <ul>
-                    <div className="py-3 flex justify-between ">
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[11px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
+                    <div className="py-3 flex justify-between  ">
+                      <li className="rounded-full  p-2 lg:w-[90px] lg:text-md md:text-[13px] sm:text-[16px] text-xs   grid justify-center items-center  bg-[#AE8959] font-semibold    text-black">
                         {d.tag}
                       </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
+                      <li className="rounded-full p-2 lg:w-[90px] lg:text-md md:text-[13px] sm:text-[16px] text-xs  grid justify-center items-center  bg-[#AE8959] font-semibold     text-black">
                         {d.tag4}
                       </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
+                      <li className="rounded-full p-2 lg:w-[90px] lg:text-md md:text-[13px] sm:text-[16px] text-xs  grid justify-center items-center  bg-[#AE8959] font-semibold    text-black">
                         {d.tag1}
                       </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
+                      <li className="rounded-full p-2  lg:text-md md:text-[13px] sm:text-[16px] text-xs grid justify-center items-center  bg-[#AE8959] font-semibold    text-black">
                         {d.tag2}
-                      </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[8px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag3}
                       </li>
                     </div>
                     <li>
@@ -58,9 +60,9 @@ function Projectdetails() {
                   </ul>
                 </div>
               </div>
-            ))}
-        </div>
-      </Tilt>
+            </Tilt>
+          ))}
+      </div>
     </div>
   );
 }

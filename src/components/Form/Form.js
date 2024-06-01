@@ -11,8 +11,8 @@ function Form() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_hna253v", "template_8bgnqi5", form.current, {
-        publicKey: "qaA1h2akl5nGjFP2E",
+      .sendForm("service_cycjent", "template_0roqg0l", form.current, {
+        publicKey: "G_yHQZ8Kw5B_S3zmZ",
       })
       .then(
         () => {
@@ -80,7 +80,7 @@ function Form() {
 
         <div>
           <textarea
-            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-500 focus:ring-blue-400 border-gray-400 rounded-md w-full"
+            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-200 focus:ring-blue-400 border-gray-400 rounded-md w-full"
             id="message"
             name="message"
             placeholder="Message"
