@@ -10,7 +10,7 @@ import data from "../../content/Education/Education.json";
 const Education = () => {
   return (
     <section id="5" className="bg-[#090917] py-14 px-3">
-      <div  className="grid justify-center py-8">
+      <div  className="grid justify-center py-8 mt-3">
         <h1 className="text-center text-white/90 text-5xl font-serif font-bold">Education</h1>
         <h2 className="text-center text-white/50 md:text-xl text-md font-serif py-3  ">
           My education has been a journey of self-discovery and growth. My

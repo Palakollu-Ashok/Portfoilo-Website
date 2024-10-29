@@ -133,33 +133,42 @@ import Tilt from "react-parallax-tilt";
 
 const Skillspage = () => {
   return (
-    <section
-      id="2"
-      className="bg-[#090917] px-3 py-10  grid place-items-center"
-    >
-      <div className="py-5">
-        <h2 className="text-white/90  text-5xl text-center  font-serif font-bold">Skills</h2>
+    <section id="2" className="bg-[#090917] px-3   grid place-items-center">
+      <div className="py-5 mt-20">
+        <h2 className="text-white/90  text-5xl text-center  font-serif font-bold">
+          Skills
+        </h2>
         <p className="text-white/50 md:mt-5 mt-3 font-serif text-center">
           Here are some of my skills on which I have been working on for the
           past 2 years.
         </p>
-        <div className="bg-[#101725] flex  md:w-[78vw] mt-5 p-5  flex-wrap md:gap-10 xl:gap-20 gap-3 justify-center    rounded-xl">
+        <div className="bg-[#101725] flex  md:w-[78vw] mt-5 p-20  flex-wrap md:gap-10 xl:gap-20 gap-5 justify-center    rounded-xl">
           {data &&
             data?.skills.map((skill, i) => (
-              <Tilt>
+             
                 <div
-                  className=" rounded-full md:px-8 md:py-5 px-3 shadow-md shadow-white/50 border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 "
+                  className=" rounded-full md:px-8 group relative md:py-5 px-3 shadow-md shadow-white/50 border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 "
                   key={i}
                 >
-                  <div className="text-white flex items-center gap-2  p-1 rounded-2xl  ">
+                  <div className="text-white flex items-center gap-2   p-1 rounded-2xl  ">
                     <img
                       src={skill.image}
-                      className="md:w-5 md:h-5 w-3 h-3 place-items-center"
+                      className="md:w-10 md:h-10 w-5 h-5 place-items-center"
                     />
-                    <p className="text-center md:text-md text-sm">{skill.name}</p>
+
+                    <span
+                      class="absolute md:-top-14 -top-9   text-center -translate-x-[50%] 
+                  z-20 origin-left scale-0  px-1 rounded-lg border 
+                  border-gray-300 bg-white text-black py-2 text-[8px] md:text-sm w-full  font-bold
+                  shadow-md transition-all  duration-300 ease-in-out 
+                  group-hover:scale-100"
+                    >
+                      {skill.name}
+                      <span></span>
+                    </span>
                   </div>
                 </div>
-              </Tilt>
+             
             ))}
         </div>
       </div>

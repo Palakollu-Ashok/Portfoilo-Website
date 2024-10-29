@@ -1,27 +1,36 @@
 import { MdRocketLaunch } from "react-icons/md";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
-// Initialize EmailJS with your user ID
 
 function Form() {
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_hna253v", "template_8bgnqi5", form.current, {
-        publicKey: "qaA1h2akl5nGjFP2E",
+      .sendForm("service_t69v0bl", "template_4ooovtf", form.current, {
+        publicKey: "FiU0NVui0EdonLpf4",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setMessage("Email Sent Successfully!");
+          resetForm();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setMessage("Failed to send email: " + error.text);
         }
       );
+
+    // Clear message after 3 seconds
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+  };
+
+  const resetForm = () => {
+    form.current.reset();
   };
 
   return (
@@ -45,9 +54,18 @@ function Form() {
             <MdRocketLaunch className="text-purple-400" />
           </span>
         </h1>
+        {message && (
+          <div
+            className={`text-center py-2 px-4 rounded-md ${
+              message.includes("Success") ? "bg-green-500" : "bg-red-500"
+            } text-white`}
+          >
+            {message}
+          </div>
+        )}
         <div>
           <input
-            className="border p-4 bg-[#101725] text-start  rounded-md w-full"
+            className="border p-4 bg-[#101725] text-start rounded-md text-gray-200 w-full"
             type="text"
             id="fullName"
             name="fullName"
@@ -58,7 +76,7 @@ function Form() {
 
         <div>
           <input
-            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-500 focus:ring-blue-400 border-gray-400 rounded-md w-full"
+            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-200 focus:ring-blue-400 border-gray-400 rounded-md w-full"
             type="email"
             id="email"
             name="email"
@@ -69,7 +87,7 @@ function Form() {
 
         <div>
           <input
-            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-500 focus:ring-blue-400 border-gray-400 rounded-md w-full"
+            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-200 focus:ring-blue-400 border-gray-400 rounded-md w-full"
             type="text"
             id="subject"
             name="subject"
@@ -80,14 +98,14 @@ function Form() {
 
         <div>
           <textarea
-            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-500 focus:ring-blue-400 border-gray-400 rounded-md w-full"
+            className="border p-4 bg-[#101725] font-bold text-start focus:ring text-gray-200 focus:ring-blue-400 border-gray-400 rounded-md w-full"
             id="message"
             name="message"
             placeholder="Message"
             required
           />
         </div>
-        <button className="p-4 bg-[#AD00FF] text-white focus:ring font-bold focus:ring-blue-400 rounded-md w-full">
+        <button className="p-4 bg-[#AD00FF] text-white hover:bg-white hover:text-black duration-300 focus:ring font-bold focus:ring-blue-400 rounded-md w-full">
           Send
         </button>
       </form>

@@ -1,53 +1,17 @@
-// import React from "react";
-// import data from "../../content/About/HeroSection.json";
-// import Resume from "../../Files/AshokResume.pdf";
-
-// function HeroSection() {
-//   return (
-//     <div id="1" className="py-5 bg-[#090917] md:px-20 lg:px-40 px-3">
-//       <section className="md:flex justify-between space-y-6 md:space-y-0">
-//         <div className=" text-white space-y-3 self-end md:w-1/2">
-//           <h1 className="lg:text-5xl text-3xl py-1">{data.wish}</h1>
-//           <h1 className="lg:text-5xl text-5xl py-1">{data.name}</h1>
-//           <h2 className="lg:text-3xl text-xl  py-1">{data.role}</h2>
-//           <h3 className="lg:text-lg text-md text-[#919299]  py-3 font-semibold  ">
-//             {data.description}
-//           </h3>
-//           <div className="md:flex grid items-center">
-//             <a
-//               href={Resume}
-//               target="_blank"
-//               className="bg-[#AF00FF] focus-within:bg-[#AF00ff] cursor-pointer w-fit  rounded-full py-4 px-20"
-//             >
-//               {data.button}
-//             </a>
-//           </div>
-//         </div>
-//         <div className="grid place-content-center md:w-1/2">
-//           <img
-//             src={data.img}
-//             alt=""
-//             className="w-48 h-48 md:w-96 md:h-96   border-2 border-purple-700  md:rounded-full"
-//           />
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default HeroSection;
-import { TypeAnimation } from "react-type-animation";
-
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import React from "react";
-import data from "../../content/About/HeroSection.json";
 import Resume from "../../Files/AshokResume.pdf";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function HeroSection() {
-
-  
+  const [text] = useTypewriter({
+    words: ["Front-End Developer."],
+    loop: true,
+    typeSpeed: 20,
+    deleteSpeed: 10,
+    delaySpeed: 2000,
+  });
   return (
     <div className="grid place-items-center bg-[#090917]">
       <section
@@ -62,14 +26,14 @@ function HeroSection() {
           >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[700px] md:max-w-[800px] md:h-[30v] rounded-t-full"
+              className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full max-w-[200px] md:max-w-[300px]  rounded-t-full"
               src="/assects/About/Heroimg.jpg"
             />
           </div>
         </div>
 
         {/* MAIN TEXT */}
-        <div className="z-30 basis-2/5 lg:w-[60vw] text-white mt-12 md:mt-32">
+        <div className="z-30  lg:w-[60vw] text-white mt-12 md:mt-32">
           {/* HEADINGS */}
           <motion.div
             initial="hidden"
@@ -81,38 +45,24 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="text-6xl font-playfair z-10 text-center md:text-start">
-              Ashok {""}
-              <span
-                className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-              >
-                Palakollu
-              </span>
-            </p>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "I'm Front-End Developer",
-                1000,
-                "I'm Front-End Developer",
-                1200,
-                "I'm Front-End Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
-              repeat={Infinity}
-            />
-
-            <p className="mt-10 mb-7 text-white/70 md:text-md text-sm text-center md:text-start  font-thin">
-              I am a motivated and versatile individual, always eager to take on
-              new challenges. With a passion for learning I am dedicated to
-              delivering high-quality results. With a positive attitude and a
-              growth mindset, I am ready to make a meaningful contribution and
-              achieve great things.
-            </p>
+            <div className="space-y-5">
+              <div>
+                <h1 className="md:text-4xl text-2xl font-bold text-white">
+                  Hi, I'm{" "}
+                  <span className="text-red-700 capitalize">
+                    Ashok Palakollu
+                  </span>
+                </h1>
+              </div>
+              <div className=" text-white xl:text-[40px] text-2xl sm:text-xs  text-start font-semibold py-4 ">
+                a {text}
+                <Cursor
+                  cursorBlinking="false"
+                  cursorStyle="|"
+                  cursorColor="#ff014f"
+                />
+              </div>
+            </div>
           </motion.div>
 
           {/* CALL TO ACTIONS */}
@@ -127,21 +77,20 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <AnchorLink
-              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 font-semibold
+            <a
+              href="#7"
+              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 md:text-md text-sm md:font-semibold
             hover:bg-blue hover:text-white transition duration-500"
-              href="#contact"
             >
               Contact Me
-            </AnchorLink>
-            <AnchorLink
-              className="rounded-r-lg bg-gradient-rainblue border border-cyan-500 py-0.5 pr-0.5"
-              href="#contact"
+            </a>
+            <a
+              href={Resume}
+              target="_blank"
+              className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-deep-blue rounded-l-lg py-3 px-7 font-semibold md:text-md text-sm md:font-semibold hover:bg-blue hover:text-white transition duration-500"
             >
-              <div className=" hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-                Let's talk.
-              </div>
-            </AnchorLink>
+              Resume(CV)
+            </a>
           </motion.div>
 
           <motion.div
@@ -155,13 +104,40 @@ function HeroSection() {
               visible: { opacity: 1, x: 0 },
             }}
           ></motion.div>
-          <div className="text-white flex gap-4 justify-center items-center w-1/2">
-            <Link to="https://www.linkedin.com/in/palakollu-ashok-a218822626">
-              <FaLinkedin className="w-5 h-5" />
-            </Link>
-            <Link to="https://github.com/Palakollu-Ashok">
-              <FaGithub className="w-5 h-5" />
-            </Link>
+          <div className="text-white flex pt-10 gap-4 md:items-start  justify-center items-center md:w-1/2">
+            <div className="group relative">
+              <Link
+                to="https://www.linkedin.com/in/palakollu-ashok-a21882262/"
+                target="_blank"
+              >
+                <FaLinkedin className="w-8 h-8" />
+
+                <span
+                  class="absolute -top-12  right-[50%] -translate-x-[50%] 
+                  z-20 origin-left scale-0 px-3 rounded-lg border 
+                  border-gray-300 bg-white text-black py-2 text-sm font-bold
+                  shadow-md transition-all duration-300 ease-in-out 
+                  group-hover:scale-100"
+                >
+                  Linkedin<span></span>
+                </span>
+              </Link>
+            </div>
+            <div className="group relative">
+              <Link to="https://github.com/Palakollu-Ashok" target="_blank">
+                <FaGithub className="w-8 h-8" />
+
+                <span
+                  class="absolute -top-12 left-[50%] -translate-x-[50%] 
+                z-20 origin-left scale-0 px-3 rounded-lg border 
+                border-gray-300 bg-white text-black py-2 text-sm font-bold
+                shadow-md transition-all duration-300 ease-in-out 
+                group-hover:scale-100"
+                >
+                  GitHub<span></span>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

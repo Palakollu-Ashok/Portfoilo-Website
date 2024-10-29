@@ -14,14 +14,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-24 z-[999] lg:px-14 px-10  bg-[#000300] text-white sticky top-0">
+    <div className="flex justify-between items-center h-24 z-[999] lg:px-14 px-10   bg-[#000300] text-white sticky top-0 w-full">
       <a
         href="#1"
-        className="w-full  gap-0.5 flex items-center  text-2xl  font-bold text-white"
+        className="md:w-full  gap-0.5 flex items-center  md:text-2xl  font-bold text-white w-full"
       >
-        <MdKeyboardArrowLeft className="text-5xl mt-1 tracking-tight text-purple-500" />
+        <MdKeyboardArrowLeft className="text-3xl mt-1 tracking-tight text-purple-500" />
         Ashok<span className="text-purple-500">/</span>Palakollu
-        <MdOutlineKeyboardArrowRight className="text-5xl mt-1 text-purple-500" />
+        <MdOutlineKeyboardArrowRight className=" text-3xl mt-1 text-purple-500" />
       </a>
 
       {/* Desktop nav */}
@@ -57,6 +57,12 @@ const Navbar = () => {
             <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
           </li>
         </a>
+        <a href="#7" className="group">
+          <li className="p-4 w-fit text-center font-bold tracking-wide hover:text-red-600">
+            Contact
+            <div class="bg-red-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+          </li>
+        </a>
         <li className=" flex  space-x-6">
           <a
             href="https://github.com/Palakollu-Ashok"
@@ -82,35 +88,40 @@ const Navbar = () => {
           }
         >
           <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4"></h1>
-          <Link to="#1">
+          <a href="#1">
             <h2 className="p-4 border-b text-xl  hover:text-red-600  border-gray-600">
               About
             </h2>
-          </Link>
-          <Link to="#2">
+          </a>
+          <a href="#2">
             <h2 className="p-4 border-b   hover:text-red-600  text-xl  border-gray-600">
               Skills
             </h2>
-          </Link>
+          </a>
 
           <div>
-            <Link to="#3">
+            <a href="#3">
               <li className="p-4 flex   text-xl border-b border-gray-600 ">
                 Experince
               </li>
-            </Link>
-            <Link to="#4">
+            </a>
+            <a href="#4">
               {" "}
               <h2 className="p-4 text-xl  border-b border-gray-600">
                 Education
               </h2>
-            </Link>{" "}
+            </a>{" "}
             <a href="#5">
               {" "}
               <h2 className="p-4 text-xl  border-b cursor-pointer border-gray-600">
                 Projects
               </h2>
-            </a>{" "}
+            </a>
+            <a href="#7">
+              <h2 className="p-4 text-xl  border-b cursor-pointer border-gray-600">
+                Contact
+              </h2>
+            </a>
             <a href="https://github.com/Palakollu-Ashok" target="_blank">
               <h2 className="p-4 text-xl  border-b cursor-pointer border-gray-600">
                 Github Profile

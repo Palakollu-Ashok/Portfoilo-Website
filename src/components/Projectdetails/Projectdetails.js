@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../content/Projects.js/Projects.json";
-import Tilt from "react-parallax-tilt";
+import { HiArrowRight } from "react-icons/hi2";
 
 function Projectdetails() {
   return (
@@ -14,53 +14,27 @@ function Projectdetails() {
       <h2 className=" text-white/50 md:text-xl text-md font-serif text-center py-4">
         {data.heading}
       </h2>
-      <Tilt>
-        <div className=" mt-3">
-          {data &&
-            data?.projects.map((d, i) => (
-              <div
-                key={i}
-                class="max-w-md bg-white bord grid   md:p-7 p-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-              >
-                <a href="#">
-                  <img class="rounded-lg" src={d.image} alt="" />
-                </a>
-                <div className="w-full ">
-                  <ul>
-                    <div className="py-3 flex justify-between ">
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[11px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag}
-                      </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag4}
-                      </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag1}
-                      </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[12px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag2}
-                      </li>
-                      <li className="rounded-full lg:text-md md:text-[16px] text-[8px]  grid justify-center items-center  bg-[#AE8959] font-semibold   p-1  text-black">
-                        {d.tag3}
-                      </li>
-                    </div>
-                    <li>
-                      <h1 className="text-white/60 "> {d.title}</h1>
-                    </li>
-                    <li>
-                      <p className="text-white/40 text-xs"> {d.date}</p>
-                    </li>
-                    <div className="max-w-lg py-3 flex ">
-                      <p className="text-white line-clamp-5   text-white/40">
-                        {d.description}
-                      </p>
-                    </div>
-                  </ul>
+      <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+        {data?.projects?.map((d, i) => (
+          <div className="w-full lg:px-12 h-84 px-3 py-10 rounded-lg bg-[#101725] shadow-shadowOne r bg-gradient-to-r from-bodyColor to-[#202327]  group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
+            <div className="xl:h-72 overflow-y-hidden">
+              <div className="flex h-full flex-col gap-3 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-xl  font-titleFont font-bold text-white">
+                    {d.title}
+                  </h2>
+                  <p className="text-white">{d.description}</p>
+                  <a href={d.link} target="_blank">
+                    <span className="text-2xl text-red-700">
+                      <HiArrowRight />
+                    </span>
+                  </a>
                 </div>
               </div>
-            ))}
-        </div>
-      </Tilt>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
