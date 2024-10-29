@@ -19,9 +19,15 @@ const Navbar = () => {
         href="#1"
         className="md:w-full  gap-0.5 flex items-center  md:text-2xl  font-bold text-white w-full"
       >
+<<<<<<< HEAD
         <MdKeyboardArrowLeft className="text-3xl mt-1 tracking-tight text-purple-500" />
         Ashok<span className="text-purple-500">/</span>Palakollu
         <MdOutlineKeyboardArrowRight className=" text-3xl mt-1 text-purple-500" />
+=======
+        <MdKeyboardArrowLeft className="md:text-5xl text-2xl mt-1 tracking-tight text-purple-500" />
+        Ashok<span className="text-purple-500">/</span>Palakollu
+        <MdOutlineKeyboardArrowRight className="md:text-5xl text-2xl mt-1 text-purple-500" />
+>>>>>>> 34671f09d20b37fc83b87ea36c7e7b9f235d80c0
       </a>
 
       {/* Desktop nav */}

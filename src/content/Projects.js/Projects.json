@@ -4,6 +4,7 @@
     {
       "id": 1,
       "title": "Cresol Infoserv Pvt. Ltd.",
+<<<<<<< HEAD
       "description": "Developed a front-end web application. Implemented  responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced  to optimize team efficiency and communication.",
       "link": "https://cresol-website.netlify.app"
     },
@@ -36,6 +37,30 @@
       "title": "Sai Prakash Tattos",
       "description": "Developed a front-end web application. Implemented  responsive user interface with React JS that provides users with a seamless experience across all devices. A web application for Art of Tattos.",
       "link": "https://sai-parakash-tattos.netlify.app"
+=======
+      "date": "Feb 2024 - Mar2024",
+      "description": "Developed a front-end web application. Implemented  responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced  to optimize team efficiency and communication.",
+      "image": "/assects/Projects/Cresole proj.png",
+      "tag": "JavaScript",
+      "tag4": "React Js  ",
+      "tag1": "HTML ",
+      "tag2": "Tailwind CSS ",
+      "category": "web app",
+      "link": "https://cresol-website.netlify.app"
+    },
+    {
+      "id": 1,
+      "title": "Agency Vayalis",
+      "date": "Apr 2024 - Apr 2024",
+      "description": "Developed a front-end web application. Implemented  responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced  to optimize team efficiency and communication.",
+      "image": "/assects/Projects/Agency.png",
+      "tag": "JavaScript",
+      "tag4": "React Js  ",
+      "tag1": "HTML ",
+      "tag2": "Tailwind CSS ",
+      "category": "web app",
+      "link": "https://agency-practice.netlify.app"
+>>>>>>> 34671f09d20b37fc83b87ea36c7e7b9f235d80c0
     }
   ]
 }

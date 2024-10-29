@@ -133,11 +133,20 @@ import Tilt from "react-parallax-tilt";
 
 const Skillspage = () => {
   return (
+<<<<<<< HEAD
     <section id="2" className="bg-[#090917] px-3   grid place-items-center">
       <div className="py-5 mt-20">
         <h2 className="text-white/90  text-5xl text-center  font-serif font-bold">
           Skills
         </h2>
+=======
+    <section
+      id="2"
+      className="bg-[#090917] px-3   grid place-items-center"
+    >
+      <div className="py-5 mt-20">
+        <h2 className="text-white/90  text-5xl text-center  font-serif font-bold">Skills</h2>
+>>>>>>> 34671f09d20b37fc83b87ea36c7e7b9f235d80c0
         <p className="text-white/50 md:mt-5 mt-3 font-serif text-center">
           Here are some of my skills on which I have been working on for the
           past 2 years.
