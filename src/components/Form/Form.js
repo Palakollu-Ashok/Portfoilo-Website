@@ -10,13 +10,9 @@ function Form() {
     e.preventDefault();
 
     emailjs
-<<<<<<< HEAD
       .sendForm("service_t69v0bl", "template_4ooovtf", form.current, {
         publicKey: "FiU0NVui0EdonLpf4",
-=======
-      .sendForm("service_cycjent", "template_0roqg0l", form.current, {
-        publicKey: "G_yHQZ8Kw5B_S3zmZ",
->>>>>>> 34671f09d20b37fc83b87ea36c7e7b9f235d80c0
+
       })
       .then(
         () => {

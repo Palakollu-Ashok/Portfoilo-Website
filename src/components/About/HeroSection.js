@@ -65,29 +65,8 @@ function HeroSection() {
                 />
               </div>
             </div>
-            <p className="xl:text-6xl md:text-3xl text-xl font-playfair z-10 text-center md:text-start">
-              Ashok {""}
-              <span
-                className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-              >
-                Palakollu
-              </span>
-            </p>
-            <div className=" text-purple-700 xl:text-xl md:text-md sm:text-xs text-xs md:text-start text-center font-semibold py-4 ">
-              <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "I'm Front-End Developer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "2em", display: "inline-block" }}
-                className="text-center"
-                repeat={Infinity}
-              />
-            </div>
+          
+            {/*  */}
 
             <p className="mt-10 mb-7 text-white/70 md:text-md text-sm text-center md:text-start   leading-6">
               I am a motivated and versatile individual, always eager to take on
