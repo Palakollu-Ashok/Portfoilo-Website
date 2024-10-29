@@ -151,14 +151,6 @@ function HeroSection() {
                 </span>
               </Link>
             </div>
-            <div className="text-white flex gap-4 md:items-start  justify-center items-center md:w-1/2">
-              <Link to="https://www.linkedin.com/in/palakollu-ashok-a218822626">
-                <FaLinkedin className="w-5 h-5" />
-              </Link>
-              <Link to="https://github.com/Palakollu-Ashok">
-                <FaGithub className="w-5 h-5" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
